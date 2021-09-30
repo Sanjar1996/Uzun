@@ -1,1 +1,1 @@
-# Darg'om davlat o'rmon ishlab chiqarish korxonasi
+# Uzun davlat o'rmon xo'jaligi
