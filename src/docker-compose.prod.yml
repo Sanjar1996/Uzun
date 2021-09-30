@@ -1,0 +1,57 @@
+version: '2'
+
+services:
+  uzundb_prod:
+    container_name: uzundb_prod
+    restart: always
+    image: postgres:12.2
+    environment:
+      POSTGRES_DB: db_uzun_prod
+      POSTGRES_USER: uzunuser_prod
+      POSTGRES_PASSWORD: uzunpass_prod
+    networks:
+      - uzun-network
+    volumes:
+        - uzundata:/var/lib/postgresql/uzundata/
+
+  uzunweb_prod:
+    container_name: uzunweb_prod
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:2828
+    volumes:
+      - static_volume_uzun:/home/app/web/static
+      - media_volume_uzun:/home/app/web/media
+    networks:
+      - uzun-network
+    depends_on:
+      - uzundb_prod
+    ports:
+      - "2828:2828"
+    env_file:
+      - ./.env.prod
+
+  uzunnginx:
+    container_name: uzun-nginx
+    restart: always
+    build: ./nginx
+    volumes:
+      - static_volume_uzun:/home/app/web/static
+      - media_volume_uzun:/home/app/web/media
+    ports:
+      - "4848:4848"
+    networks:
+      - uzun-network
+    depends_on:
+      - uzunweb_prod
+
+volumes:
+  uzundata:
+  static_volume_uzun:
+  media_volume_uzun:
+
+networks:
+  uzun-network:
+    driver: bridge

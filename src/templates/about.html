@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load  static %}
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Biz haqimizda</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Bosh saxifa</a></li>
+            <li>Biz haqimizda</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static '/img/about.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+              <h3>Uzun davlat o'rmon xo'jaligi Surxondaryo viloyati Adilya boshqarmasi huzuridagi Sariosiyo tumani Yagona darcha markazining 2017 yil 26 sentiyabrdagi 27-sonli reester raqami bilan ro'yhatga olindi.</h3>
+            <p class="fst-italic">
+              Xo'jalik o'z faoliyatini davlat va xo'jalik boshqaruv organlari, huquqni muhofaza qiluvch organlar, mahalliy davlat hokimiyati organlari, nodavlat-notijorat tashkilotlar va boshqa tashkilotlar bilan hamkorlikda amalga oshiradi.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> Umumiy yerlarning katta miqdori o'rmon yerlari hisobiga to'g'ri keladi!</li>
+              <li><i class="bi bi-check2-circle"></i> Qishloq xo'jaligi uchun ajratilgan yerlar bog' va tomarqa ekinlari uchun bo'lib berilgan</li>
+            </ul>
+            <p>
+              Uzun davlat o'rmon xo'jaligining <a href="{% static '/nizom.pdf' %}"><b>nizomi</b></a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section class="facts section-bg" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row counters">
+        {% for data in about_maydon %}
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="{{ data.maydon }}" data-purecounter-duration="1" class="purecounter"></span>
+            <p>{{ data.title }}</p>
+          </div>
+        {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Our Skills Section ======= -->
+    <section class="skills" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Umumiy yerlar foiz hisobida!</h2>
+          <p>Uzun davlat o'rmon xo'jaliginng umumiy yeri <b>134149</b> gektarni tashkil etadi. Bu yerlarda o'rmon yerlari, yaylov yerlari, yo'l osti yerlari va boshqa qishloq xo'jaligi yerlari sifatida foydalaniladi.</p>
+        </div>
+
+       <!--  <div class="skills-content">
+
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">O'rmon bilan qoplangan <i class="val">18.8%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Yaylov<i class="val">8%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="9" aria-valuemin="" aria-valuemax="100">
+              <span class="skill">Yo'l osti<i class="val">2%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Qishloq xo'jalik <i class="val">7.7%</i></span>
+            </div>
+          </div>
+
+        </div> -->
+        <!-- <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Yaylov</div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">O'rmon</div>
+            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Boshqa</div>
+        </div> -->
+        <h4>O'rmon bilan qoplangan yerlar</h4>  
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:19%">
+              <center>18.8%</center>
+            </div>
+        </div>
+        <h4>Yaylov yerlari</h4>  
+        <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:42%">
+              <center>42.2%</center>
+            </div>
+        </div>
+        <h4>Siyrak o'rmonlar</h4>  
+        <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:7%">
+              <center>6.7%</center>
+            </div>
+        </div>
+        <h4>Boshqa yerlar</h4>  
+        <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:43%">
+              <center>42.3%</center>
+            </div>
+        </div> 
+
+      </div>
+    </section><!-- End Our Skills Section -->
+  </main><!-- End #main -->
+
+ {% endblock content %}
