@@ -1464,7 +1464,7 @@ section {
 }
 
 .team .member .member-info p {
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: 14px;
   line-height: 26px;
   color: #666;

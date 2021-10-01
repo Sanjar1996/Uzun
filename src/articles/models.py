@@ -83,8 +83,8 @@ class HodimModel(models.Model):
     lavozim = models.CharField(max_length=250)
     birth_day = models.DateField()
     tg_joyi = models.CharField(max_length=150)
-    oqigan_joyi = models.CharField(max_length=150)
-    ilmiy_darajasi = models.CharField(max_length=150)
+    oqigan_joyi = models.CharField(max_length=150, blank=True)
+    ilmiy_darajasi = models.CharField(max_length=150, blank=True)
     ish_tajribasi = models.SmallIntegerField()
     image = models.ImageField(upload_to='image/', blank=True)
 

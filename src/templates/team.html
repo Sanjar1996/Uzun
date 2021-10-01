@@ -23,10 +23,8 @@
     <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
       <div class="container">
         <div class="row">
-        <!-- Boshlandi__-->
-
-        {% for data in hodim_model %}
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+         <!--  {% for data in hodim_model %}
+          <div class="col-lg-3 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
                 {% if data.image %}
@@ -38,7 +36,28 @@
                 <span>{{ data.lavozim }}</span>
                 <p>Tug'ilgan yili: {{ data.birth_day}}</p>
               </div>
+          </div>
+          {% endfor %} -->
+          
+        {% for data in hodim_model %}
+          <div class="col-lg-4 col-md-4 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                {% if data.image %}
+                  <img src="{{ data.image.url }}" class="img-fluid" alt="{{ data.ism }}">
+                {% endif %}  
+              </div>
+              <div class="member-info">
+                <h4>{{ data.ism|safe }}</h4>
+                <span>{{ data.lavozim }}</span>
+                <p><b>Tug'ilgan yili:</b> {{ data.birth_day}}.</p>
+                <p><b>Tug'ilgan joyi:</b> {{ data.tg_joyi}}.</p>
+                <p><b>Ta'lim muassasasi:</b> {{ data.oqigan_joyi}}.</p>
+                <p><b>Ilmiy darajasi:</b> {{ data.ilmiy_darajasi}}.</p>
+                <p><b>Ish tajribasi:</b> {{ data.ish_tajribasi }} yil.</p>
+              </div>
             </div>
+            
           </div>
         {% endfor %}
 
