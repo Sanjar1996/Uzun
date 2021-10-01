@@ -1453,6 +1453,9 @@ section {
   margin: 15px 0 5px 0;
   font-size: 18px;
 }
+.team .member .member-img img {
+  width: 45% ;
+}
 
 .team .member .member-info span {
   display: block;
