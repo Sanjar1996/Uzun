@@ -1414,7 +1414,8 @@ section {
 }
 
 .team .member .member-img img {
-  height: 200px;
+  width: 50%;
+  height: 250px;
 }
 
 .team .member .social {
