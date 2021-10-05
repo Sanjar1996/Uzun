@@ -907,8 +907,8 @@ section {
   margin-bottom: 0;
 }
 
-.features .container .rasm1 .rasm2 img{
-  width: 250px;
+.features .img-fluid{
+  width: 500px;
 }
 /*--------------------------------------------------------------
 # About
