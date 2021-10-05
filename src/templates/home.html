@@ -118,8 +118,8 @@
         </div>
 
       {% for future in future_model %}
-        <div class="row rasm1" data-aos="fade-up">
-          <div class="col-md-5 rasm2">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
           {% if future.image %}
             <img src="{{ future.image.url }}" class="img-fluid" alt="{{ future.title }}">
           {% endif %}
