@@ -7,6 +7,6 @@ urlpatterns = [
     path('about/', aboutview, name='about'),
     path('news/', newsview, name='news'),
     path('<int:pk>/', detailview, name='detail'),
-    path('hodimlar/', hodim_view, name='hodim'),
+    path('xodimlar/', hodim_view, name='xodim'),
     path('price/', price_about, name='price'),
 ]
