@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #hero h2 {
-  color: #fff;
+  color: rgb(12, 2, 2);
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 700;
@@ -373,7 +373,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
-  color: #fff;
+  color: rgb(12, 2, 2);
 }
 
 #hero .carousel-control-prev, #hero .carousel-control-next {
