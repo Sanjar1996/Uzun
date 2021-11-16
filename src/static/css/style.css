@@ -1082,8 +1082,8 @@ section {
 }
 
 .service-details .card-img img {
-  width: 75%;
-  height: 75%;
+  width: 250%;
+  height: 250%;
   transition: all 0.3s ease-in-out;
 }
 
