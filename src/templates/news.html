@@ -29,7 +29,7 @@
               <div class="card-img">
               <h5 class="card-title"><a href="{% url 'detail' data.pk %} ">{{ data.title }}</a></h5>
               {% if data.image %}
-                <img src="{{ data.image.url }}" alt="..." style="height: 250px;">
+                <img src="{{ data.image.url }}" alt="..." >
               {% endif %}
               </div>
               <div class="card-body">
