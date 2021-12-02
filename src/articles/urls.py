@@ -9,4 +9,5 @@ urlpatterns = [
     path('<int:pk>/', detailview, name='detail'),
     path('xodimlar/', hodim_view, name='xodim'),
     path('price/', price_about, name='price'),
+    path('manzil/', manzil, name='manzil'),
 ]

@@ -22,7 +22,7 @@ def homeview(request):
         'sub_models': sub_models,
         'mainsite_models': mainsite_models,
         'news_model': news_model,
-        'page_obj': page_obj,   
+        'page_obj': page_obj,
 
     }
     return render(request, 'home.html', context)
@@ -74,6 +74,11 @@ def hodim_view(request):
     }
     return render(request, 'team.html', context)
 
+
 def price_about(request):
     context = {}
     return render(request, 'price.html')
+
+
+def manzil(request):
+    return render(request, 'manzil.html')
