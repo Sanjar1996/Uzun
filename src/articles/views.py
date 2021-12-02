@@ -78,7 +78,3 @@ def hodim_view(request):
 def price_about(request):
     context = {}
     return render(request, 'price.html')
-
-
-def manzil(request):
-    return render(request, 'manzil.html')
